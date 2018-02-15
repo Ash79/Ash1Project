@@ -1,0 +1,4 @@
+---
+applications:
+- name: customeribmdemo9909
+  memory: 256M
