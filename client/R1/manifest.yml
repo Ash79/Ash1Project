@@ -1,0 +1,4 @@
+---
+applications:
+- name: ibmcustomerdemojava
+  memory: 256M
