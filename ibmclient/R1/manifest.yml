@@ -1,0 +1,4 @@
+---
+applications:
+- name: apptyyyy
+  memory: 256M

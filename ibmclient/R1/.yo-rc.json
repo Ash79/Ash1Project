@@ -1,0 +1,532 @@
+{
+  "generator-cedrus-api": {
+    "haveConfigFile": true,
+    "discover": {
+      "ask": false,
+      "apiConsumes": [
+        "application/json"
+      ],
+      "apiProduces": [
+        "application/json"
+      ]
+    },
+    "detail": {
+      "ask": false,
+      "isPublic": true,
+      "httpMethods": [
+        "get",
+        "put",
+        "post",
+        "patch",
+        "delete"
+      ],
+      "httpStatusCodes": [
+        "204",
+        "404",
+        "500"
+      ],
+      "versioning": {
+        "enabled": true,
+        "type": "uri",
+        "versionNumber": [
+          "v1"
+        ],
+        "uriOrder": "resourceFirst",
+        "contentTypeOrder": "applicationFirst",
+        "customHeaderName": "version"
+      },
+      "apiData": {
+        "returnDataType": "No"
+      },
+      "records": {
+        "limit": 10
+      },
+      "cache": {
+        "RedisEnable": false,
+        "RedisHost": "pub-redis-19334.dal-05.1.sl.garantiadata.com",
+        "RedisPort": "19334",
+        "RedisPassword": "zKvyYzznhsdvYwgq",
+        "RedisExpire": 180
+      },
+      "pagination": {
+        "PaginationEnable": true
+      },
+      "filter": {
+        "FilterEnable": false
+      },
+      "security": {
+        "enabled": false,
+        "type": ""
+      },
+      "logging": {
+        "enabled": false
+      }
+    },
+    "deploy": {
+      "ask": false,
+      "apiApplicationType": "nodejs",
+      "openWhisk": {
+        "OpenWhiskEnable": false
+      },
+      "tls": {
+        "TLSEnable": false
+      },
+      "cloudFoundry": {
+        "appName": "apptyyyy",
+        "appMemory": "256M"
+      },
+      "javaOptions": {
+        "basePackage": "io.cedrus.apigen",
+        "packagingType": "jar",
+        "framework": [
+          "jaxrs",
+          "jaxrs"
+        ],
+        "springBootDeployment": "tomcat"
+      }
+    },
+    "multipleResources": {
+      "enabled": true,
+      "resources": [
+        {
+          "resourceName": "ibmclient",
+          "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"firstName\":{\"type\":\"string\"},\"lastName\":{\"type\":\"string\"},\"Address\":{\"type\":\"object\",\"properties\":{\"Street Name\":{\"type\":\"string\"},\"City\":{\"type\":\"string\"},\"State\":{\"type\":\"string\"},\"ZipCode\":{\"type\":\"string\"},\"Country\":{\"type\":\"string\"}},\"required\":[\"Street Name\",\"City\",\"State\",\"ZipCode\",\"Country\"]}},\"required\":[\"firstName\",\"lastName\",\"Address\"]}",
+          "isPublic": true,
+          "httpMethods": [
+            "get",
+            "put",
+            "post",
+            "patch",
+            "delete"
+          ],
+          "httpStatusCodes": [
+            "204",
+            "404",
+            "500"
+          ],
+          "requireTestDataType": "Test Data",
+          "apiFakerMappingFileProvided": true,
+          "apiFakeMappingFileType": "object",
+          "apiFakerMappingFileLocation": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "type": "string",
+                "faker": "name.firstName"
+              },
+              "lastName": {
+                "type": "string",
+                "faker": "name.lastName"
+              },
+              "Address": {
+                "type": "object",
+                "properties": {
+                  "Street Name": {
+                    "type": "string",
+                    "faker": "address.streetAddress"
+                  },
+                  "City": {
+                    "type": "string",
+                    "faker": "address.city"
+                  },
+                  "State": {
+                    "type": "string",
+                    "faker": "address.state"
+                  },
+                  "ZipCode": {
+                    "type": "string",
+                    "faker": "address.zipCode"
+                  },
+                  "Country": {
+                    "type": "string",
+                    "enum": [
+                      "U.S.A"
+                    ]
+                  }
+                },
+                "required": [
+                  "Street Name",
+                  "City",
+                  "State",
+                  "ZipCode",
+                  "Country"
+                ]
+              }
+            },
+            "required": [
+              "firstName",
+              "lastName",
+              "Address"
+            ]
+          },
+          "apiFakerMappingJsonType": "Data Schema",
+          "recordsLimit": "5",
+          "requireQuery": false,
+          "whichParameter": null,
+          "fake_data": [
+            {
+              "firstName": "Stone",
+              "lastName": "Bechtelar",
+              "Address": {
+                "Street Name": "37599 Adolph Parkway",
+                "City": "Nadiahaven",
+                "State": "Washington",
+                "ZipCode": "90254",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Kyla",
+              "lastName": "Beier",
+              "Address": {
+                "Street Name": "02975 Fay Wells",
+                "City": "Violetteville",
+                "State": "California",
+                "ZipCode": "52193",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Griffin",
+              "lastName": "Berge",
+              "Address": {
+                "Street Name": "5472 Agnes Loaf",
+                "City": "Sylvesterborough",
+                "State": "Wisconsin",
+                "ZipCode": "98885",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Bradly",
+              "lastName": "Stanton",
+              "Address": {
+                "Street Name": "5165 Roma Ford",
+                "City": "North Lottie",
+                "State": "Massachusetts",
+                "ZipCode": "12822-3784",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Constance",
+              "lastName": "Paucek",
+              "Address": {
+                "Street Name": "03848 Earnest Wells",
+                "City": "Fadelbury",
+                "State": "Illinois",
+                "ZipCode": "03946",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Rupert",
+              "lastName": "Hoeger",
+              "Address": {
+                "Street Name": "05492 Antone Centers",
+                "City": "Markborough",
+                "State": "South Dakota",
+                "ZipCode": "47829-7228",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Kay",
+              "lastName": "Stiedemann",
+              "Address": {
+                "Street Name": "4008 Leannon Unions",
+                "City": "Schowaltermouth",
+                "State": "Arkansas",
+                "ZipCode": "25125-5949",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Lazaro",
+              "lastName": "Miller",
+              "Address": {
+                "Street Name": "96580 Mayert Village",
+                "City": "Lake Rolandobury",
+                "State": "Colorado",
+                "ZipCode": "69201-9066",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Lempi",
+              "lastName": "Runte",
+              "Address": {
+                "Street Name": "6012 Jayne Passage",
+                "City": "Port Aracely",
+                "State": "California",
+                "ZipCode": "71918-7221",
+                "Country": "U.S.A"
+              }
+            },
+            {
+              "firstName": "Grace",
+              "lastName": "Mante",
+              "Address": {
+                "Street Name": "0164 Santos Mill",
+                "City": "Francescoshire",
+                "State": "Illinois",
+                "ZipCode": "84848-5946",
+                "Country": "U.S.A"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "javaOptions": {
+      "basePackage": "io.cedrus.apigen",
+      "packagingType": "jar",
+      "framework": [
+        "jaxrs",
+        "jaxrs"
+      ],
+      "springBootDeployment": "tomcat"
+    },
+    "apiOverview": {
+      "apiName": "ibmclient",
+      "apiBasePath": "/api",
+      "apiDescription": "This is sample API being generated by cedrus-api generator"
+    },
+    "dataInput": {
+      "dataInputType": "JSON Input"
+    },
+    "JSONExtraction": [
+      {
+        "resourceName": "ibmclient",
+        "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"firstName\":{\"type\":\"string\"},\"lastName\":{\"type\":\"string\"},\"Address\":{\"type\":\"object\",\"properties\":{\"Street Name\":{\"type\":\"string\"},\"City\":{\"type\":\"string\"},\"State\":{\"type\":\"string\"},\"ZipCode\":{\"type\":\"string\"},\"Country\":{\"type\":\"string\"}},\"required\":[\"Street Name\",\"City\",\"State\",\"ZipCode\",\"Country\"]}},\"required\":[\"firstName\",\"lastName\",\"Address\"]}",
+        "isPublic": true,
+        "httpMethods": [
+          "get",
+          "put",
+          "post",
+          "patch",
+          "delete"
+        ],
+        "httpStatusCodes": [
+          "204",
+          "404",
+          "500"
+        ],
+        "requireTestDataType": "Test Data",
+        "apiFakerMappingFileProvided": true,
+        "apiFakeMappingFileType": "object",
+        "apiFakerMappingFileLocation": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "faker": "name.firstName"
+            },
+            "lastName": {
+              "type": "string",
+              "faker": "name.lastName"
+            },
+            "Address": {
+              "type": "object",
+              "properties": {
+                "Street Name": {
+                  "type": "string",
+                  "faker": "address.streetAddress"
+                },
+                "City": {
+                  "type": "string",
+                  "faker": "address.city"
+                },
+                "State": {
+                  "type": "string",
+                  "faker": "address.state"
+                },
+                "ZipCode": {
+                  "type": "string",
+                  "faker": "address.zipCode"
+                },
+                "Country": {
+                  "type": "string",
+                  "enum": [
+                    "U.S.A"
+                  ]
+                }
+              },
+              "required": [
+                "Street Name",
+                "City",
+                "State",
+                "ZipCode",
+                "Country"
+              ]
+            }
+          },
+          "required": [
+            "firstName",
+            "lastName",
+            "Address"
+          ]
+        },
+        "apiFakerMappingJsonType": "Data Schema",
+        "recordsLimit": "5",
+        "requireQuery": false,
+        "whichParameter": null,
+        "fake_data": [
+          {
+            "firstName": "Stone",
+            "lastName": "Bechtelar",
+            "Address": {
+              "Street Name": "37599 Adolph Parkway",
+              "City": "Nadiahaven",
+              "State": "Washington",
+              "ZipCode": "90254",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Kyla",
+            "lastName": "Beier",
+            "Address": {
+              "Street Name": "02975 Fay Wells",
+              "City": "Violetteville",
+              "State": "California",
+              "ZipCode": "52193",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Griffin",
+            "lastName": "Berge",
+            "Address": {
+              "Street Name": "5472 Agnes Loaf",
+              "City": "Sylvesterborough",
+              "State": "Wisconsin",
+              "ZipCode": "98885",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Bradly",
+            "lastName": "Stanton",
+            "Address": {
+              "Street Name": "5165 Roma Ford",
+              "City": "North Lottie",
+              "State": "Massachusetts",
+              "ZipCode": "12822-3784",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Constance",
+            "lastName": "Paucek",
+            "Address": {
+              "Street Name": "03848 Earnest Wells",
+              "City": "Fadelbury",
+              "State": "Illinois",
+              "ZipCode": "03946",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Rupert",
+            "lastName": "Hoeger",
+            "Address": {
+              "Street Name": "05492 Antone Centers",
+              "City": "Markborough",
+              "State": "South Dakota",
+              "ZipCode": "47829-7228",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Kay",
+            "lastName": "Stiedemann",
+            "Address": {
+              "Street Name": "4008 Leannon Unions",
+              "City": "Schowaltermouth",
+              "State": "Arkansas",
+              "ZipCode": "25125-5949",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Lazaro",
+            "lastName": "Miller",
+            "Address": {
+              "Street Name": "96580 Mayert Village",
+              "City": "Lake Rolandobury",
+              "State": "Colorado",
+              "ZipCode": "69201-9066",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Lempi",
+            "lastName": "Runte",
+            "Address": {
+              "Street Name": "6012 Jayne Passage",
+              "City": "Port Aracely",
+              "State": "California",
+              "ZipCode": "71918-7221",
+              "Country": "U.S.A"
+            }
+          },
+          {
+            "firstName": "Grace",
+            "lastName": "Mante",
+            "Address": {
+              "Street Name": "0164 Santos Mill",
+              "City": "Francescoshire",
+              "State": "Illinois",
+              "ZipCode": "84848-5946",
+              "Country": "U.S.A"
+            }
+          }
+        ],
+        "jsonSchema": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "Address": {
+              "type": "object",
+              "properties": {
+                "Street Name": {
+                  "type": "string"
+                },
+                "City": {
+                  "type": "string"
+                },
+                "State": {
+                  "type": "string"
+                },
+                "ZipCode": {
+                  "type": "string"
+                },
+                "Country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "Street Name",
+                "City",
+                "State",
+                "ZipCode",
+                "Country"
+              ]
+            }
+          },
+          "required": [
+            "firstName",
+            "lastName",
+            "Address"
+          ]
+        }
+      }
+    ]
+  }
+}
