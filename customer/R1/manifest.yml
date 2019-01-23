@@ -1,0 +1,5 @@
+---
+applications:
+- name: customerapp1234
+  memory: 256M
+  command: node R1/index.js

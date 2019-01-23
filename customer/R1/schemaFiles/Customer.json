@@ -1,0 +1,1 @@
+{"type":"object","properties":{"customerName":{"type":"string","format":""},"customerId":{"type":"string","format":""},"streetName":{"type":"string","format":""},"cityName":{"type":"string","format":""}},"required":["customerName","customerId","streetName","cityName"]}
